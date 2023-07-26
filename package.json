@@ -17,5 +17,29 @@
     "eslint": "^8.45.0",
     "typescript": "^5.1.6",
     "vite": "^4.4.7"
-  }
+  },
+  "description": "Muso Dojo note web component built with Lit",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/musodojo/md-note.git"
+  },
+  "keywords": [
+    "Muso",
+    "Dojo",
+    "note",
+    "web",
+    "component",
+    "Lit",
+    "music",
+    "guitar",
+    "piano",
+    "violin"
+  ],
+  "author": "Muso Dojo",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/musodojo/md-note/issues"
+  },
+  "homepage": "https://github.com/musodojo/md-note#readme"
 }
