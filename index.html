@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Muso Dojo Note Component</title>
+    <script type="module" src="/src/md-note.ts"></script>
+  </head>
+  <style>
+    body {
+      background-color: black;
+    }
+    .board {
+      display: grid;
+      grid-auto-flow: column;
+      width: 40rem;
+      height: 10rem;
+      background-color: dimgray;
+    }
+    md-note {
+      --clr-dark: black;
+      --clr-light: white;
+      font-weight: bold;
+      color: var(--clr-dark);
+      text-shadow: 0.1rem -0.1rem 0.5rem var(--clr-light),
+        0.1rem 0.1rem 0.5rem var(--clr-light),
+        -0.1rem 0.1rem 0.5rem var(--clr-light),
+        -0.1rem -0.1rem 0.5rem var(--clr-light);
+    }
+  </style>
+  <body>
+    <div class="board">
+      <md-note
+        midi="48"
+        color="#ED2929"
+        color-width="90%"
+        color-height="90%"
+        label="C"
+        course="1"
+        fret="0"
+      ></md-note>
+      <md-note
+        not-playable
+        midi="49"
+        color="#9F000F"
+        color-width="50%"
+        color-height="50%"
+        label="D♭"
+        course="1"
+        fret="1"
+      ></md-note>
+      <md-note
+        midi="50"
+        color="#78C7C7"
+        color-width="90%"
+        color-height="90%"
+        label="D"
+        course="1"
+        fret="2"
+      ></md-note>
+      <md-note
+        not-playable
+        midi="51"
+        color="#00008B"
+        color-width="50%"
+        color-height="50%"
+        label="E♭"
+        course="1"
+        fret="3"
+      ></md-note>
+      <md-note
+        midi="52"
+        color="#FF9933"
+        color-width="90%"
+        color-height="90%"
+        label="E"
+        course="1"
+        fret="4"
+      ></md-note>
+      <md-note
+        midi="53"
+        color="#EBEB19"
+        color-width="90%"
+        color-height="90%"
+        label="F"
+        course="1"
+        fret="5"
+      ></md-note>
+      <md-note
+        not-playable
+        midi="54"
+        color="#286704"
+        color-width="50%"
+        color-height="50%"
+        label="G♭"
+        course="1"
+        fret="6"
+      ></md-note>
+      <md-note
+        midi="55"
+        color="#99CC33"
+        color-width="90%"
+        color-height="90%"
+        label="G"
+        course="1"
+        fret="7"
+      ></md-note>
+      <md-note
+        not-playable
+        midi="56"
+        color="#660099"
+        color-width="50%"
+        color-height="50%"
+        label="A♭"
+        course="1"
+        fret="8"
+      ></md-note>
+      <md-note
+        midi="57"
+        color="#CC00FF"
+        color-width="90%"
+        color-height="90%"
+        label="A"
+        course="1"
+        fret="9"
+      ></md-note>
+      <md-note
+        not-playable
+        midi="58"
+        color="#BF6A1F"
+        color-width="50%"
+        color-height="50%"
+        label="B♭"
+        course="1"
+        fret="10"
+      ></md-note>
+      <md-note
+        midi="59"
+        color="#FF9EE6"
+        color-width="90%"
+        color-height="90%"
+        label="B"
+        course="1"
+        fret="11"
+      ></md-note>
+      <md-note
+        midi="60"
+        color="#ED2929"
+        color-width="90%"
+        color-height="90%"
+        label="C"
+        course="1"
+        fret="12"
+      ></md-note>
+    </div>
+  </body>
+  <script>
+    board = document.querySelector("div.board");
+    board.addEventListener("mdnoteon", (e) =>
+      console.log(`NOTE ON: ${e.detail.label}`)
+    );
+    board.addEventListener("mdnoteoff", (e) =>
+      console.log(`NOTE OFF: ${e.detail.label}`)
+    );
+  </script>
+</html>
