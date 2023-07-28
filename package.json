@@ -1,5 +1,5 @@
 {
-  "name": "md-note",
+  "name": "@musodojo/md-note",
   "private": false,
   "version": "1.0.0",
   "type": "module",
@@ -36,7 +36,7 @@
     "piano",
     "violin"
   ],
-  "author": "Muso Dojo",
+  "author": "Muso Dojo <musodojomail@gmail.com>",
   "license": "Unlicense",
   "bugs": {
     "url": "https://github.com/musodojo/md-note/issues"
